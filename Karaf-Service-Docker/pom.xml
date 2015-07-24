@@ -23,14 +23,14 @@
 			<plugin>
 				<groupId>org.jolokia</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.11.2</version>
+				<version>0.13.2</version>
 				<configuration>
 					<images>
 						<image>
-							<name>anierbeck/javaland-karaf-docker:0.1</name>
+							<name>anierbeck/javaland-karaf-docker:0.3</name>
 							<alias>karaf</alias>
 							<build>
-								<from>java:8u40</from>
+								<from>jeanblanchard/busybox-java:jdk8</from>
 								<ports>
 									<port>1099</port>
 									<port>5005</port>
@@ -49,7 +49,9 @@
 								<env>
 									<KARAF_DATA>/opt/karaf/karaf-data/</KARAF_DATA>
 								</env>
-								<command>/opt/karaf/apache-karaf/bin/karaf debug</command>
+								<cmd>
+									<shell>/opt/karaf/apache-karaf/bin/karaf debug</shell>
+								</cmd>
 							</build>
 							<run>
 								<volumes>

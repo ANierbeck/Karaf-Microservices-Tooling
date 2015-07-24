@@ -16,7 +16,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0">
 
 	<repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
 
@@ -25,11 +25,12 @@
         <feature>scr</feature>
         <feature>http</feature>
         <feature version="${cxf.version}">cxf-jaxrs</feature>
-        <config name="org.jolokia.osgi">
-            org.jolokia.user=karaf
-            org.jolokia.realm=karaf
-            org.jolokia.authMode=jaas
-        </config>
+        <feature>jolokia</feature>
+<!--         <config name="org.jolokia.osgi"> -->
+<!--             org.jolokia.user=karaf -->
+<!--             org.jolokia.realm=karaf -->
+<!--             org.jolokia.authMode=jaas -->
+<!--         </config> -->
 <!--         <bundle>mvn:org.jolokia/jolokia-osgi/${jolokia.version}</bundle> -->
     </feature>
 

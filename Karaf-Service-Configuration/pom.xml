@@ -28,32 +28,8 @@
 	<description>Jolokia-Karaf details</description>
 	
 	<properties>
-		<karaf.version>3.0.3</karaf.version>
-    	<cxf.version>3.0.3</cxf.version>
-		<jolokia.version>1.2.4-SNAPSHOT</jolokia.version>
+    	<cxf.version>3.1.1</cxf.version>
 	</properties>
-	
-	<dependencies>
-		<dependency>
-			<groupId>org.jolokia</groupId>
-			<artifactId>jolokia-osgi</artifactId>
-			<version>${jolokia.version}</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>jolokia-core</artifactId>
-					<groupId>org.jolokia</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>jolokia-jsr160</artifactId>
-					<groupId>org.jolokia</groupId>
-				</exclusion>
-				<exclusion>
-					<artifactId>json-simple</artifactId>
-					<groupId>com.googlecode.json-simple</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-	</dependencies>
 
 	<build>
 		<pluginManagement>

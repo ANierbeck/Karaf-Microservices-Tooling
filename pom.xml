@@ -11,4 +11,7 @@
     <module>Karaf-Service-Runtime</module>
     <module>Karaf-Service-Docker</module>
   </modules>
+  <properties>
+  	<karaf.version>4.0.0</karaf.version>
+  </properties>
 </project>
