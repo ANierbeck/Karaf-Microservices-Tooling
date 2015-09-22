@@ -21,8 +21,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>JavaLand-Tooling</artifactId>
-        <groupId>de.nierbeck.javaland.tools</groupId>
+        <artifactId>Karaf-Microservices-Tooling</artifactId>
+        <groupId>de.nierbeck.microservices.karaf.tools</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -44,34 +44,8 @@
             <snapshots>
             </snapshots>
         </repository>
-        
-        <!-- karaf staging repo -->
-        <repository>
-            <id>karaf-staging</id>
-            <url>https://repository.apache.org/content/repositories/orgapachekaraf-1033/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-            	<enabled>false</enabled>
-            </snapshots>
-        </repository>
     </repositories>
     
-    <pluginRepositories>
-    	<pluginRepository>
-    	<!-- karaf staging repo -->
-            <id>karaf-staging</id>
-            <url>https://repository.apache.org/content/repositories/orgapachekaraf-1033/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-            	<enabled>false</enabled>
-            </snapshots>
-    	</pluginRepository>
-    </pluginRepositories>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.karaf.features</groupId>
@@ -141,7 +115,6 @@
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <configuration>
-                    <!-- <startupFeatures/> -->
                     <bootFeatures>
                     	<feature>bundle</feature>
                     	<feature>config</feature>
@@ -159,8 +132,6 @@
                         <feature>war</feature>
                         <feature>Karaf-Service-Configuration</feature>
                     </bootFeatures>
-                    <!-- <installedFeatures/> -->
-                   
                 </configuration>
             </plugin>
         </plugins>

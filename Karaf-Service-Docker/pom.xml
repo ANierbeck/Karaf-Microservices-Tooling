@@ -2,11 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>de.nierbeck.javaland.tools</groupId>
-		<artifactId>JavaLand-Tooling</artifactId>
+		<groupId>de.nierbeck.microservices.karaf.tools</groupId>
+		<artifactId>Karaf-Microservices-Tooling</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>Karaf-Service-Docker</artifactId>
+	
+	<properties>
+		<karaf.docker.version>0.4</karaf.docker.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -23,14 +27,14 @@
 			<plugin>
 				<groupId>org.jolokia</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.13.2</version>
+				<version>0.13.4</version>
 				<configuration>
 					<images>
 						<image>
-							<name>anierbeck/javaland-karaf-docker:0.3</name>
+							<name>anierbeck/javaland-karaf-docker:${karaf.docker.version}</name>
 							<alias>karaf</alias>
 							<build>
-								<from>jeanblanchard/busybox-java:jdk8</from>
+								<from>jeanblanchard/java:jdk-8</from>
 								<ports>
 									<port>1099</port>
 									<port>5005</port>
