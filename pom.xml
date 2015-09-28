@@ -7,7 +7,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>karaf-deployer-maven-plugin</module>
-    <module>Karaf-Service-Configuration</module>
     <module>Karaf-Service-Runtime</module>
     <module>Karaf-Service-Docker</module>
   </modules>
